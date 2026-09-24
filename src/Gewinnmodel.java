@@ -38,4 +38,12 @@ public class Gewinnmodel {
         }
         gesamtPunkte = gesamtPunkte + rundenErgebnis;
     }
+
+    public boolean hatGewonnen(){
+        return gesamtPunkte <= 100;
+    }
+
+    public boolean hatVerloren(){
+        return gesamtPunkte <= 0;
+    }
 }
