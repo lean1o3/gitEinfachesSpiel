@@ -40,7 +40,7 @@ public class Gewinnmodel {
     }
 
     public boolean hatGewonnen(){
-        return gesamtPunkte <= 100;
+        return gesamtPunkte >= 100;
     }
 
     public boolean hatVerloren(){
