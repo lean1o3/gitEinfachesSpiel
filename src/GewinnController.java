@@ -1,6 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import java.awt.Color;
 public class GewinnController {
     private Gewinnmodel spielModel;
     private GewinnView spielView;
@@ -19,6 +20,17 @@ public class GewinnController {
                 spielView.getComputerTextFeld().setText(String.valueOf(spielModel.getComputerZahl()));
                 spielView.getRundenErgebnisLabel().setText("Rundenergebnis: " + spielModel.getRundenErgebnis());
                 spielView.getGesamtPunkteLabel().setText("Gesamtpunkte: " + spielModel.getGesamtPunkte());
+
+                if(spielModel.getRundenErgebnis() > 0) {
+                    spielView.getRundenErgebnisLabel().setBackground(Color.GREEN);
+                    spielView.getGesamtPunkteLabel().setBackground(Color.GREEN);
+                } else if(spielModel.getRundenErgebnis() < 0){
+                    spielView.getRundenErgebnisLabel().setBackground(Color.RED);
+                    spielView.getGesamtPunkteLabel().setBackground(Color.RED);
+                } else{
+                    spielView.getRundenErgebnisLabel().setBackground(Color.WHITE);
+                    spielView.getGesamtPunkteLabel().setBackground(Color.WHITE);
+                }
 
                 if(spielModel.hatGewonnen()){
                     JOptionPane.showMessageDialog(spielView, "Du hast gewonnen!");
