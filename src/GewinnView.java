@@ -39,7 +39,7 @@ public class GewinnView extends JFrame{
         spielerTextFeld = new JTextField();
         computerTextFeld = new JTextField();
 
-        computerTextFeld.setEditable(true);
+        computerTextFeld.setEditable(false);
 
         spielerTextFeld.setHorizontalAlignment(JTextField.CENTER);
         computerTextFeld.setHorizontalAlignment(JTextField.CENTER);
