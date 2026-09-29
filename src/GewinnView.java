@@ -58,4 +58,24 @@ public class GewinnView extends JFrame{
         setLocationRelativeTo(null);
         setVisible(true);
     }
+
+    public JLabel getGesamtPunkteLabel(){
+        return gesamtPunkteLabel;
+    }
+
+    public JLabel getRundenErgebnisLabel(){
+        return rundenErgebnisLabel;
+    }
+
+    public JTextField getSpielerTextFeld(){
+        return spielerTextFeld;
+    }
+
+    public JTextField getComputerTextFeld(){
+        return computerTextFeld;
+    }
+
+    public JButton getNochmalButton(){
+        return nochmalButton;
+    }
 }
