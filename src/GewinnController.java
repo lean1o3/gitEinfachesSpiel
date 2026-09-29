@@ -28,6 +28,7 @@ public class GewinnController {
 
                 spielView.getSpielerTextFeld().setEnabled(false);
                 spielView.getNochmalButton().setEnabled(true);
+                spielView.getNochmalButton().requestFocus();
             }
         });
 
@@ -41,6 +42,7 @@ public class GewinnController {
 
                 spielView.getSpielerTextFeld().setEnabled(true);
                 spielView.getNochmalButton().setEnabled(false);
+                spielView.getSpielerTextFeld().requestFocus();
             }
         });
     }
