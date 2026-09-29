@@ -31,5 +31,31 @@ public class GewinnView extends JFrame{
         ergebnisBereich.add(gesamtPunkteLabel);
 
         add(ergebnisBereich, BorderLayout.NORTH);
+
+        JPanel spielBereich = new JPanel(new GridLayout(2, 2, 10, 5));
+        JLabel spielerLabel = new JLabel("Deine Zahl: ", SwingConstants.CENTER);
+        JLabel computerLabel = new JLabel("Computer: ", SwingConstants.CENTER);
+
+        spielerTextFeld = new JTextField();
+        computerTextFeld = new JTextField();
+
+        computerTextFeld.setEditable(true);
+
+        spielerTextFeld.setHorizontalAlignment(JTextField.CENTER);
+        computerTextFeld.setHorizontalAlignment(JTextField.CENTER);
+
+        spielBereich.add(spielerLabel);
+        spielBereich.add(computerLabel);
+        spielBereich.add(spielerTextFeld);
+        spielBereich.add(computerTextFeld);
+
+        add(spielBereich, BorderLayout.CENTER);
+
+        JPanel buttonBereich = new JPanel();
+        nochmalButton = new JButton("noch einmal");
+        buttonBereich.add(nochmalButton);
+        add(buttonBereich, BorderLayout.SOUTH);
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 }
